@@ -208,7 +208,7 @@ fieldset[disabled] .btn-primary.active {
     background: linear-gradient(
             rgba(0, 0, 0, 0.1),
             rgba(0, 0, 0, 0.2)
-    ), url(images/main-banner.jpg);
+    ), url(../images/main-banner.jpg);
     background-size: cover;
     color: #ffffff;
     padding: 0;
@@ -308,7 +308,7 @@ section.gray h3{
 }
 
 section.about{
-    background: url(images/tweed.png);
+    background: url(../images/tweed.png);
     min-height: 400px;
     position: relative;
 }
@@ -591,7 +591,7 @@ img{
 }
 
 section.contact{
-    background: #f5f5f5 url(images/map-bottom.png);
+    background: #f5f5f5 url(../images/map-bottom.png);
     min-height: 400px;
     background-size:auto 100%;
     padding-top: 30px;
@@ -653,7 +653,7 @@ footer *{
 }
 
 .hexicon {
-    background: url("images/hex.png");
+    background: url("../images/hex.png");
     width: 132px;
     height: 210px;
     position: relative;
@@ -666,28 +666,28 @@ footer *{
 }
 
 .inicon.retina{
-    background: url("images/retina.png") no-repeat center 40px;
+    background: url("../images/retina.png") no-repeat center 40px;
     background-size: 80px auto;
 }
 .inicon.support{
-    background: url("images/support.png") no-repeat center 40px;
+    background: url("../images/support.png") no-repeat center 40px;
     background-size: 80px auto;
 }
 .inicon.speed{
-    background: url("images/speed.png") no-repeat center 40px;
+    background: url("../images/speed.png") no-repeat center 40px;
     background-size: 80px auto;
 }
 .inicon.social{
-    background: url("images/social.png") no-repeat center 40px;
+    background: url("../images/social.png") no-repeat center 40px;
     background-size: 80px auto;
 }
 
 .inicon.shopping{
-    background: url("images/shopping.png") no-repeat center 40px;
+    background: url("../images/shopping.png") no-repeat center 40px;
     background-size: 80px auto;
 }
 .inicon.cloud{
-    background: url("images/cloud.png") no-repeat center 40px;
+    background: url("../images/cloud.png") no-repeat center 40px;
     background-size: 80px auto;
 }
 
