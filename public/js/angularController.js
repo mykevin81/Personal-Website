@@ -3,27 +3,48 @@
  */
 // TODO create angular controller using this file. Create factory to generate Project data
 
-var app = angular.module('personalApp', ['ngRoute']);
+'use strict';
 
-app.config(function($routeProvider){
+var app = angular.module('angularApp', ['ngRoute']);
 
-    $routeProvider
+app.config(['$routeProvider',
+    function($routeProvider){
 
-        //load home page
-        .when('/', {
-            templateUrl: 'main.ejs',
-            controller: 'mainController'
-        })
+        $routeProvider
 
-        //load projectList page
-        .when('/projectList', {
-            templateUrl: 'projectList.ejs',
-            controller: 'projectListController'
-        })
+            //load home page
+            .when('/', {
+                templateUrl: 'main.ejs',
+                controller: 'mainController'
+            })
 
-        //load project page
-        .when('/project', {
-            templateUrl: 'project.ejs',
-            controller: 'projectController'
-        });
+            //load projectList page
+            .when('/projectList', {
+                templateUrl: 'projectList',
+                controller: 'projectListController'
+            })
+
+            //load project page
+            .when('/project:prjectId', {
+                templateUrl: 'project',
+                controller: 'projectController'
+            })
+
+            .otherwise({
+                redirectTo: '/'
+            });
+}]);
+
+
+app.controller('mainController', function($scope) {
+
 });
+
+/*app.controller('projectListController', function() {
+
+});
+
+app.controller('projectController', function() {
+
+});*/
+
