@@ -28,10 +28,6 @@ app.config(['$routeProvider',
             .when('/project:prjectId', {
                 templateUrl: 'project',
                 controller: 'projectController'
-            })
-
-            .otherwise({
-                redirectTo: '/'
             });
 }]);
 
