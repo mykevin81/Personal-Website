@@ -41,11 +41,11 @@ app.controller('mainController', function($scope) {
     $scope.hello = 'hello';
 });
 
-/*app.controller('projectListController', function() {
+app.controller('projectListController', function($scope) {
 
 });
 
-app.controller('projectController', function() {
+app.controller('projectController', function($scope) {
 
-});*/
+});
 
