@@ -7,14 +7,19 @@
 
 var app = angular.module('angularApp', ['ngRoute']);
 
-app.config(['$routeProvider',
-    function($routeProvider){
+app.config(['$routeProvider', '$locationProvider',
+    function($routeProvider, $locationProvider){
+
+        $locationProvider.html5Mode({
+            enabled: true,
+            requireBase: false
+        });
 
         $routeProvider
 
             //load home page
             .when('/', {
-                templateUrl: 'main.ejs',
+                templateUrl: 'main',
                 controller: 'mainController'
             })
 
@@ -33,7 +38,7 @@ app.config(['$routeProvider',
 
 
 app.controller('mainController', function($scope) {
-
+    $scope.hello = 'hello';
 });
 
 /*app.controller('projectListController', function() {
