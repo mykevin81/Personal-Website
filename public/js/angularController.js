@@ -35,10 +35,8 @@ app.config(['$routeProvider', '$locationProvider',
                 controller: 'projectController'
             })
 
-            //login to add my own
-            .when('/login', {
-                templateUrl: 'login',
-                controller: 'loginController'
+            .otherwise({
+                redirectTo: '/'
             });
 }]);
 
