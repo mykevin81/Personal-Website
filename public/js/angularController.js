@@ -30,9 +30,15 @@ app.config(['$routeProvider', '$locationProvider',
             })
 
             //load project page
-            .when('/project:prjectId', {
+            .when('/project:projectId', {
                 templateUrl: 'project',
                 controller: 'projectController'
+            })
+
+            //login to add my own
+            .when('/login', {
+                templateUrl: 'login',
+                controller: 'loginController'
             });
 }]);
 
