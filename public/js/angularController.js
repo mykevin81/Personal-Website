@@ -41,9 +41,13 @@ app.config(['$routeProvider', '$locationProvider',
 }]);
 
 
-app.controller('mainController', function($scope) {
-    $scope.hello = 'hello';
-});
+app.controller('mainController', ['$scope', '$window', function($scope, $window) {
+
+
+    $scope.resume = function() {
+        $window.location.href = '/src/Resume.pdf';
+    }
+}]);
 
 app.controller('projectListController', function($scope) {
 
