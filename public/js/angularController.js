@@ -8,7 +8,7 @@
 var app = angular.module('angularApp', ['ngRoute']);
 
 app.config(['$routeProvider', '$locationProvider',
-    function($routeProvider, $locationProvider){
+    function ($routeProvider, $locationProvider) {
 
         $locationProvider.html5Mode({
             enabled: true,
@@ -17,7 +17,7 @@ app.config(['$routeProvider', '$locationProvider',
 
         $routeProvider
 
-            //load home page
+        //load home page
             .when('/', {
                 templateUrl: 'main',
                 controller: 'mainController'
@@ -38,22 +38,21 @@ app.config(['$routeProvider', '$locationProvider',
             .otherwise({
                 redirectTo: '/'
             });
-}]);
+    }]);
 
 
-app.controller('mainController', ['$scope', '$window', function($scope, $window) {
+app.controller('mainController', ['$scope', '$window', function ($scope, $window) {
 
-
-    $scope.resume = function() {
+    $scope.resume = function () {
         $window.location.href = '/src/Resume.pdf';
     }
 }]);
 
-app.controller('projectListController', function($scope) {
+app.controller('projectListController', function ($scope) {
 
 });
 
-app.controller('projectController', function($scope) {
+app.controller('projectController', function ($scope) {
 
 });
 
