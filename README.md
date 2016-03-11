@@ -1,6 +1,6 @@
 # Personal Website built in Node.js
 
-![Alt text](https://travis-ci.org/mykevin81/Personal-Website.svg?branch=master "Travis CI")
+[![Build Status](https://travis-ci.org/mykevin81/Personal-Website.svg?branch=master)](https://travis-ci.org/mykevin81/Personal-Website)
 
 ![Alt text](/public/img/ScreenShot.png?raw=true "Website View")
 
