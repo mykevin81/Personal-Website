@@ -29,3 +29,5 @@ function getProjects(tableName, callback) {
         connection.release();
     });
 }
+
+exports.getProjects = getProjects;
