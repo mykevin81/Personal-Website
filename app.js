@@ -26,7 +26,16 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
 
-app.route('/api').get(api.showAllProjects);
+app.get('/api', api.showAllProjects);
+
+//Single page application **Must be below all the APIs**
+app.get('/:name', function (req, res) {
+    var name = req.params.name;
+    console.log(name);
+    res.render(name);
+});
+
+
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

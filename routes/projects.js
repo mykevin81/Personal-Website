@@ -15,4 +15,3 @@ function showAllProjects(req, res) {
 }
 
 exports.showAllProjects = showAllProjects;
-//module.exports = router;
