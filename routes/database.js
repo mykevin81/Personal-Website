@@ -8,7 +8,7 @@ var connection = mysql.createPool({
     database: 'personal_website'
 });
 
-function getProjects(tableName, callBack) {
+function getProjects(tableName, callback) {
 
     connection.getConnection(function(err, connection) {
         if(err) {
@@ -26,7 +26,6 @@ function getProjects(tableName, callBack) {
                 }
             });
         }
-    connection.release();
-
+        connection.release();
     });
 }
