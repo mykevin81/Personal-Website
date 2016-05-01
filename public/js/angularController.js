@@ -2,7 +2,7 @@
 
 var app = angular.module('angularApp', ['ngRoute']);
 
-var url = 'http://localhost';
+var url = 'http://kevin-hwang-website.herokuapp.com/';
 var port = 3000;
 
 app.config(['$routeProvider', '$locationProvider',
@@ -45,7 +45,7 @@ app.controller('mainController', ['$scope', '$window', '$http', function ($scope
         $window.location.href = '/src/Resume.pdf';
     };
 
-    $http.get(url + ':' + port + '/api')
+    $http.get(url + '/api')
         .success(function(data) {
             $scope.items = data;
             console.log($scope.items);
