@@ -5,6 +5,7 @@ var logger = require('morgan');
 var mysql = require('mysql');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var cors = require('cors');
 var passport = require('passport');
 var GoogleStrategy = require('passport-google-oauth20').Strategy;
 var database = require('./routes/database');
