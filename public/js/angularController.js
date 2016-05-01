@@ -1,11 +1,9 @@
-/**
- * Created by mykev on 3/1/2016.
- */
-
-
 'use strict';
 
 var app = angular.module('angularApp', ['ngRoute']);
+
+var url = 'http://localhost';
+var port = 3000;
 
 app.config(['$routeProvider', '$locationProvider',
     function ($routeProvider, $locationProvider) {
@@ -41,11 +39,17 @@ app.config(['$routeProvider', '$locationProvider',
     }]);
 
 
-app.controller('mainController', ['$scope', '$window', function ($scope, $window) {
+app.controller('mainController', ['$scope', '$window', '$http', function ($scope, $window, $http) {
 
     $scope.resume = function () {
         $window.location.href = '/src/Resume.pdf';
-    }
+    };
+
+    $http.get(url + ':' + port + '/api')
+        .success(function(data) {
+            $scope.items = data;
+            console.log($scope.items);
+        });
 }]);
 
 app.controller('projectListController', function ($scope) {

@@ -5,6 +5,8 @@ var logger = require('morgan');
 var mysql = require('mysql');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+var passport = require('passport');
+var GoogleStrategy = require('passport-google-oauth20').Strategy;
 var database = require('./routes/database');
 var routes = require('./routes/index');
 var api = require('./routes/projects');
@@ -24,7 +26,21 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+/*passport.use(new GoogleStrategy({
+    clientID: 556527221886-1gov53rrlcidvkqjiuuffe8gvet5mqvo.apps.googleusercontent.com,
+    clientSecret: zTaO8qmwJuVPWw6LdnrSYITF,
+    callbackURL: "someurl"
+    },
+    function(accessToken, refreshToken, profile, cb) {
+        User.findOrCreate({googleId: profile.id}, function(err, user) {
+            return cb(err, user);
+        });
+    }
+));*/
+
 app.use('/', routes);
+
+
 
 app.get('/api', api.showAllProjects);
 
