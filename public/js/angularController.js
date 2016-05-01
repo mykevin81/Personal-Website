@@ -2,7 +2,7 @@
 
 var app = angular.module('angularApp', ['ngRoute']);
 
-var url = 'http://kevin-hwang-website.herokuapp.com/';
+var url = 'http://kevin-hwang-website.herokuapp.com';
 var port = 3000;
 
 app.config(['$routeProvider', '$locationProvider',
