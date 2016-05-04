@@ -47,7 +47,7 @@ app.controller('mainController', ['$scope', '$window', '$http', function ($scope
 
     $http.get(url + '/api')
         .success(function(data) {
-            $scope.items = data;
+            $scope.items = data.Projects;
             console.log($scope.items);
         });
 }]);

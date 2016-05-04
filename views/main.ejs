@@ -75,49 +75,18 @@
 
 <div ng-controller="mainController">
     <section class="no-padding" id="projects">
-        <!-- TODO create a database to host project Name, Description, Technology used and multimedia. Use angular to produce those result in other page -->
         <div class="container-fluid">
             <div class="row no-gutter">
-                <div class="col-lg-4 col-sm-6">
-                    <a href="https://github.com/Majiccow/ParkBark" class="portfolio-box">
-                        <img src="img/portfolio/1.jpg" class="img-responsive" alt="">
+                <div class="col-lg-4 col-sm-6" ng-repeat="x in items">
+                    <a href="{{x.project_url}}" class="portfolio-box">
+                        <img src="{{x.project_img}}" class="img-responsive" alt="">
                         <div class="portfolio-box-caption">
                             <div class="portfolio-box-caption-content">
                                 <div class="project-category text-faded">
-                                    Android
+                                    {{x.project_category}}
                                 </div>
                                 <div class="project-name">
-                                    Park Bark
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="https://github.com/mykevin81/Android-Bike-Tracker" class="portfolio-box">
-                        <img src="img/portfolio/2.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Android
-                                </div>
-                                <div class="project-name">
-                                    Android Bike Computer
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <a href="http://sfsuswe.com/~f15g09/" class="portfolio-box">
-                        <img src="img/portfolio/3.jpg" class="img-responsive" alt="">
-                        <div class="portfolio-box-caption">
-                            <div class="portfolio-box-caption-content">
-                                <div class="project-category text-faded">
-                                    Web Application
-                                </div>
-                                <div class="project-name">
-                                    TableTop
+                                    {{x.project_name}}
                                 </div>
                             </div>
                         </div>
