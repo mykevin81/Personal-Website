@@ -43,7 +43,7 @@ app.use('/', routes);
 
 
 
-app.get('/api', api.showAllProjects);
+
 
 //Single page application **Must be below all the APIs**
 app.get('/:name', function (req, res) {
