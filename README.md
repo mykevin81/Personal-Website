@@ -10,6 +10,6 @@ This is my personal website built in Node JS. It is the second iteration of my p
   - Node.js
   - Express framework
   - Angular jS
-  - Database (type still undecided)
+  - MySQL
   
 
